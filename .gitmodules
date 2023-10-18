@@ -4,3 +4,6 @@
 [submodule "deps/linux"]
 	path = deps/linux
 	url = https://github.com/torvalds/linux
+[submodule "deps/riscv-toolchain"]
+	path = deps/riscv-toolchain
+	url = https://github.com/riscv-collab/riscv-gnu-toolchain.git
