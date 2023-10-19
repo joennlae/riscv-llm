@@ -1,9 +1,9 @@
 [submodule "deps/qemu"]
 	path = deps/qemu
 	url = https://github.com/qemu/qemu
-[submodule "deps/linux"]
-	path = deps/linux
-	url = https://github.com/torvalds/linux
-[submodule "deps/riscv-toolchain"]
-	path = deps/riscv-toolchain
-	url = https://github.com/riscv-collab/riscv-gnu-toolchain.git
+[submodule "src/modules/llama.cpp"]
+	path = src/modules/llama.cpp
+	url = https://github.com/ggerganov/llama.cpp.git
+[submodule "deps/libslirp"]
+	path = deps/libslirp
+	url = https://gitlab.freedesktop.org/slirp/libslirp.git
