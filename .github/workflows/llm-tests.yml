@@ -1,0 +1,21 @@
+name: LLM Inference Test
+on: [push]
+
+jobs:
+  llm-riscv-llama-test:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/joennlae/qemu-riscv-vec:latest
+      env:
+        CC: gcc-13
+        CXX: g++-13
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Llama 2 7B Inference Test
+        run: |
+          bash /root/ubuntu-riscv-vector/startup.sh
+          cd test
+          make test-llama
