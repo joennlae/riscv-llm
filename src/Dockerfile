@@ -42,6 +42,7 @@ COPY startup.sh /root/ubuntu-riscv-vector/startup.sh
 COPY ssh.sh /root/ubuntu-riscv-vector/ssh.sh
 COPY start_riscv.sh /root/ubuntu-riscv-vector/start_riscv.sh
 COPY ssh_cmd.sh /root/ubuntu-riscv-vector/ssh_cmd.sh
+COPY scp_cmd.sh /root/ubuntu-riscv-vector/scp_cmd.sh
 
 # run script on entry
 ENTRYPOINT ["/home/ubuntu-riscv-vector/startup.sh"]
