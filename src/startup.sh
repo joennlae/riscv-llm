@@ -28,6 +28,6 @@ function is_still_booting() {
     fi
 }
 
-wait_for 120 is_still_booting
+wait_for 600 is_still_booting
 
 bash /root/ubuntu-riscv-vector/ssh.sh
