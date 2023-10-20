@@ -6,12 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/joennlae/qemu-riscv-vec:latest
+      env:
+        CC: gcc-13
+        CXX: g++-13
     defaults:
       run:
         shell: bash -el {0}
     steps:
       - uses: actions/checkout@v3
-      - name: Check types with mypy
+      - name: Booted into RISC-V Ubuntu 22.04
         run: |
           echo "Hello world!"
+          bash /root/ubuntu-riscv-vector/startup.sh
           gcc-13 -v
