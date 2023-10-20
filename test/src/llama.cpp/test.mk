@@ -1,6 +1,4 @@
 
-TEST_DIR = $(HOME)/test/src/llama
-
 test-llama:
 # download llama.cpp
 	$(RUN) "git clone https://github.com/ggerganov/llama.cpp.git"
