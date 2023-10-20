@@ -2,7 +2,7 @@ name: RISC-V Vector Intrinsics Test
 on: [push]
 
 jobs:
-  riscv-booting-test:
+  riscv-intrinsic-test:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/joennlae/qemu-riscv-vec:latest
