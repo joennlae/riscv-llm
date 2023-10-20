@@ -1,0 +1,17 @@
+name: RISC-V Ubuntu 22.04 Booting
+on: [push]
+
+jobs:
+  riscv-booting-test:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/joennlae/qemu-riscv-vec:latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check types with mypy
+        run: |
+          echo "Hello world!"
+          gcc-13 -v
