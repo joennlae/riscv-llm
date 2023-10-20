@@ -1,6 +1,6 @@
 #!/bin/bash
 
-./start_riscv.sh
+bash /root/ubuntu-riscv-vector/start_riscv.sh
 
 function wait_for() {
     timeout=$1
@@ -15,7 +15,7 @@ function wait_for() {
 }
 
 function is_still_booting() {
-    cat system.log | grep --text "login:"
+    cat /root/ubuntu-riscv-vector/system.log | grep --text "login:"
     boot_status=$?
     # check if system is booted
     if [ $boot_status -eq 0 ]; then
@@ -23,11 +23,11 @@ function is_still_booting() {
         return 0;
     else
         echo "System is booting"
-        tail -n 10 system.log | sed 's/^/  ###  /'
+        tail -n 10 /root/ubuntu-riscv-vector/system.log | sed 's/^/  ###  /'
         return 1;
     fi
 }
 
 wait_for 120 is_still_booting
 
-./ssh.sh
+bash /root/ubuntu-riscv-vector/ssh.sh

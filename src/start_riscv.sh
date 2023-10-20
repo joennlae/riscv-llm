@@ -23,11 +23,11 @@ qemu-system-riscv64 \
     -cpu rv64,v=true,zba=true,vlen=128 \
     -smp 8 \
     -m 8G \
-    -bios fw_payload.bin \
+    -bios /root/ubuntu-riscv-vector/fw_payload.bin \
     -device virtio-blk-device,drive=hd0 \
     -object rng-random,filename=/dev/urandom,id=rng0 \
     -device virtio-rng-device,rng=rng0 \
-    -drive file=riscv64-QemuVM.qcow2,format=qcow2,id=hd0 \
+    -drive file=/root/ubuntu-riscv-vector/riscv64-QemuVM.qcow2,format=qcow2,id=hd0 \
     -device virtio-net-device,netdev=usernet \
     -netdev user,id=usernet,$ports \
-    &> system.log &
+    &> /root/ubuntu-riscv-vector/system.log &

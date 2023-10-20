@@ -36,9 +36,6 @@ RUN cd && wget https://iis.ee.ethz.ch/~janniss/scratch_schneematt/ubuntu-riscv-v
     && mv ubuntu-22.04-gcc-13-backup/ ubuntu-riscv-vector/ \
     && rm ubuntu-riscv-vector.tar.gz
 
-# set startpoint of container
-WORKDIR /root/ubuntu-riscv-vector
-
 RUN apt install sshpass -y
 
 COPY startup.sh /root/ubuntu-riscv-vector/startup.sh
@@ -46,4 +43,4 @@ COPY ssh.sh /root/ubuntu-riscv-vector/ssh.sh
 COPY start_riscv.sh /root/ubuntu-riscv-vector/start_riscv.sh
 
 # run script on entry
-ENTRYPOINT ["./startup.sh"]
+ENTRYPOINT ["/home/ubuntu-riscv-vector/startup.sh"]
