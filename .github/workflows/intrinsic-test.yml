@@ -1,0 +1,20 @@
+name: RISC-V Vector Intrinsics Test
+on: [push]
+
+jobs:
+  riscv-booting-test:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/joennlae/qemu-riscv-vec:latest
+      env:
+        CC: gcc-13
+        CXX: g++-13
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test RISC-V Vector Intrinsics
+        run: |
+          cd test
+          make test-intrinsics
