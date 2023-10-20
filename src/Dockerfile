@@ -31,10 +31,10 @@ RUN cd && git clone https://gitlab.freedesktop.org/slirp/libslirp.git \
 # add to LD_LIBRARY_PATH
 ENV LD_LIBRARY_PATH=/usr/local/lib/x86_64-linux-gnu
 
-RUN cd && wget https://iis.ee.ethz.ch/~janniss/scratch_schneematt/ubuntu-riscv-vector.tar.gz \
-    && tar -xvf ubuntu-riscv-vector.tar.gz \
+RUN cd && wget https://iis.ee.ethz.ch/~janniss/scratch_schneematt/ubuntu-riscv-vector-new.tar.gz \
+    && tar -xvf ubuntu-riscv-vector-new.tar.gz \
     && mv ubuntu-22.04-gcc-13-backup/ ubuntu-riscv-vector/ \
-    && rm ubuntu-riscv-vector.tar.gz
+    && rm ubuntu-riscv-vector-new.tar.gz
 
 RUN apt install sshpass -y
 
