@@ -23,7 +23,7 @@ function is_still_booting() {
         return 0;
     else
         echo "System is booting"
-        tail -n 10 /root/ubuntu-riscv-vector/system.log | sed 's/^/  ###  /'
+        tail -n 1 /root/ubuntu-riscv-vector/system.log | sed 's/^/  ###  /'
         return 1;
     fi
 }

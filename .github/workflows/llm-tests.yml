@@ -3,6 +3,7 @@ on: [push]
 
 jobs:
   llm-riscv-llama-test:
+    timeout-minutes: 360
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/joennlae/qemu-riscv-vec:latest
