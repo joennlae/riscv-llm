@@ -16,7 +16,7 @@ This repository is used for some preliminary testing of the RISCV-LLM project. I
 
 ## Llama 2 7B Example
 
-One example taken from the CI:
+One example taken from [the CI](https://github.com/joennlae/riscv-llm/actions/runs/6596561289/job/17922815758#step:4:1680):
 
 ```txt
 What do you think about RISC-V?
